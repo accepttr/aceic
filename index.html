@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, sans-serif; }
+        body { background: #0e1621; color: white; height: 100vh; display: flex; justify-content: center; align-items: center; }
+        
+        .alert-box {
+            background: rgba(30, 30, 30, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            width: 85%;
+            max-width: 340px;
+            border-radius: 20px;
+            text-align: center;
+            padding: 25px 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            animation: popIn 0.3s ease;
+        }
+        .alert-text {
+            font-size: 17px;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            color: #fff;
+            font-weight: 400;
+        }
+        .alert-btn {
+            background: #0a84ff;
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 14px;
+            border-radius: 12px;
+            display: block;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+        }
+        @keyframes popIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+    </style>
+</head>
+<body>
+
+    <div class="alert-box">
+        <div class="alert-text">
+            ❗️ Отправьте Star Notepad #18,898 и 2894 ⭐️ автоматически пополнятся на Ваш аккаунт.
+        </div>
+        <button class="alert-btn" onclick="closeAlert()">ОК</button>
+    </div>
+
+    <script>
+        function closeAlert() {
+            // Просто закрываем окно (возврат назад)
+            window.history.back(); 
+        }
+    </script>
+</body>
+</html>
